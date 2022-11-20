@@ -1,10 +1,11 @@
-0
-0
-0
-0
-0
-0
-0
-0
-0
-0
+Ming 8
+Jen 11
+James 15
+Aaron 20
+Farees 31
+Michael 35
+Ryan 42
+Sabir 45
+Bob 63
+Nick 70
+

@@ -82,6 +82,7 @@ public class Frame extends JFrame {
         setSize(dim);
         setVisible(true);
         setLocationRelativeTo(null);
+        pack();
 
     }
 

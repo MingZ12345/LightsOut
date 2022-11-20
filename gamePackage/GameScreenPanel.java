@@ -265,7 +265,7 @@ public class GameScreenPanel extends JPanel implements MouseListener, MouseMotio
     public void paintComponent(Graphics g) {
         int[] intScreenSizeArray = universalValues.screenSize();
         g.drawImage(backgroundImg, 0, 0, this);
-        g.drawImage(titleImg, intScreenSizeArray[0] / 4 + 125, intScreenSizeArray[1] / 20, this);
+        g.drawImage(titleImg, intScreenSizeArray[0] / 4 + 125, intScreenSizeArray[1] / 30, this);
 
         for(int x = 0; x < 5; x++) {
             for(int y = 0; y < 5; y++) {

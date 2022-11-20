@@ -52,8 +52,8 @@ public class ScoreBoard extends JPanel implements MouseListener, MouseMotionList
         readFile();
         int[] intScreenSizeArray = universalValues.screenSize();
         Dimension dim = getPreferredSize();
-        dim.width = intScreenSizeArray[0] / 4 * 3;
-        dim.height = intScreenSizeArray[1] / 4 * 3 - 60;
+        dim.width = intScreenSizeArray[0];
+        dim.height = intScreenSizeArray[1];
         addMouseListener(this);
         addMouseMotionListener(this);
         setPreferredSize(dim);
@@ -68,7 +68,6 @@ public class ScoreBoard extends JPanel implements MouseListener, MouseMotionList
     public void readFile() throws IOException {
         for(int i = 2; i < 12; i++) {
             rankingStr[i] = Files.readAllLines(Paths.get("Ranking/ranking.txt")).get(i - 2);
-            rankingInt[i] = Integer.parseInt(rankingStr[i]);
         }
     }
 
@@ -89,9 +88,10 @@ public class ScoreBoard extends JPanel implements MouseListener, MouseMotionList
     // Returns void
     // =======================================================================
     public void setButtonPolygon() {
+        int[] intScreenSizeArray = universalValues.screenSize();
         int[] intXArray = new int[4];
         int[] intYArray = new int[4];
-        int intX = 2534;
+        int intX = intScreenSizeArray[0] - 346;
         int intY = 0;
         intXArray[0] = intX;
         intXArray[1] = intX + 346;
