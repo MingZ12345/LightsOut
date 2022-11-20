@@ -48,7 +48,7 @@ public class EndOfGameDisplay extends JPanel implements MouseListener, MouseMoti
         setButtonPolygon();
         int[] intScreenSizeArray = universalValues.screenSize();
         LeftSideGameScreenPanel = new LeftSideGameScreenPanel();
-        setMoves(0);
+        setMoves(8);
         setString();
         Dimension dim = getPreferredSize();
         dim.width = intScreenSizeArray[0];
