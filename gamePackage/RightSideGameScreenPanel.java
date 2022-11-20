@@ -39,7 +39,7 @@ public class RightSideGameScreenPanel extends JPanel{
     // Returns void
     // =======================================================================
     public void importImage() {
-        rightSidePanelImg  = new ImageIcon("RightSidePanel.png").getImage();
+        rightSidePanelImg  = new ImageIcon("Graphics/RightSidePanel.png").getImage();
     }
 
     // =======================================================================

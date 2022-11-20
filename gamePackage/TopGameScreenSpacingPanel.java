@@ -17,7 +17,7 @@ public class TopGameScreenSpacingPanel extends JPanel {
     public TopGameScreenSpacingPanel() {
         Dimension dim = getPreferredSize();
         dim.width = 2880;
-        dim.height = 325;
+        dim.height = 350;
         setPreferredSize(dim);
         setOpaque(false);
     }

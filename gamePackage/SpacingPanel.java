@@ -21,8 +21,8 @@ public class SpacingPanel extends JPanel{
     public SpacingPanel() {
         int[] intScreenSizeArray = universalValues.screenSize();
         Dimension dim = getPreferredSize();
-        dim.width = intScreenSizeArray[0] / 4 * 3;
-        dim.height = intScreenSizeArray[1] / 4 * 3 - 750;
+        dim.width = intScreenSizeArray[0] * 3 / 4;
+        dim.height = intScreenSizeArray[1] - 700;
         setPreferredSize(dim);
         setOpaque(false);
     }

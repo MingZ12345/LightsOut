@@ -17,8 +17,8 @@ public class UniversalValues{
     public int[] screenSize() {
         int[] intScreenSizeArray = new int[2];
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        intScreenSizeArray[0] = screenSize.width * 4 / 3;
-        intScreenSizeArray[1] = screenSize.height * 4 / 3;
+        intScreenSizeArray[0] = screenSize.width * 3 / 4;
+        intScreenSizeArray[1] = screenSize.height * 27 / 40 - 60;
         return intScreenSizeArray;
     }
 }

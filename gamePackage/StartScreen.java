@@ -34,8 +34,8 @@ public class StartScreen extends JPanel implements MouseListener, MouseMotionLis
         setButtonPolygon();
         int[] intScreenSizeArray = universalValues.screenSize();
         Dimension dim = getPreferredSize();
-        dim.width = intScreenSizeArray[0] / 4 * 3;
-        dim.height = intScreenSizeArray[1] / 4 * 3 - 60;
+        dim.width = intScreenSizeArray[0];
+        dim.height = intScreenSizeArray[1];
         addMouseListener(this);
         addMouseMotionListener(this);
         setPreferredSize(dim);
@@ -48,7 +48,7 @@ public class StartScreen extends JPanel implements MouseListener, MouseMotionLis
     // Returns void
     // =======================================================================
     public void importImage() {
-        mainScreenImg  = new ImageIcon("MainPage.png").getImage();
+        mainScreenImg  = new ImageIcon("Graphics/MainPage.png").getImage();
     }
 
     // =======================================================================

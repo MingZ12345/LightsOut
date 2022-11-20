@@ -2,7 +2,7 @@
 package gamePackage;
 
 //imports the following libraries for class to use
-import java.awt.BorderLayout;
+import java.awt.*;
 import java.io.IOException;
 import javax.swing.JFrame;
 
@@ -76,6 +76,12 @@ public class Frame extends JFrame {
                 callPanel(e.getChecker());
             }
         });
+        Dimension dim = getPreferredSize();
+        dim.width = intScreenSizeArray[0];
+        dim.height = intScreenSizeArray[1];
+        setSize(dim);
+        setVisible(true);
+        setLocationRelativeTo(null);
 
     }
 

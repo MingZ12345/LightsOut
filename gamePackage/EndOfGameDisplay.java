@@ -48,11 +48,11 @@ public class EndOfGameDisplay extends JPanel implements MouseListener, MouseMoti
         setButtonPolygon();
         int[] intScreenSizeArray = universalValues.screenSize();
         LeftSideGameScreenPanel = new LeftSideGameScreenPanel();
-        setMoves(11);
+        setMoves(0);
         setString();
         Dimension dim = getPreferredSize();
-        dim.width = intScreenSizeArray[0] / 4 * 3;
-        dim.height = intScreenSizeArray[1] / 4 * 3 - 60;
+        dim.width = intScreenSizeArray[0];
+        dim.height = intScreenSizeArray[1];
         addMouseListener(this);
         addMouseMotionListener(this);
         setPreferredSize(dim);
@@ -65,7 +65,7 @@ public class EndOfGameDisplay extends JPanel implements MouseListener, MouseMoti
     // Returns void
     // =======================================================================
     public void importImage() {
-        endOfGameImg = new ImageIcon("EndGameScreen.png").getImage();
+        endOfGameImg = new ImageIcon("Graphics/EndGameScreen.png").getImage();
     }
 
     // =======================================================================

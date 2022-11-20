@@ -79,7 +79,7 @@ public class ScoreBoard extends JPanel implements MouseListener, MouseMotionList
     // Returns void
     // =======================================================================
     public void importImage() {
-        rankingImg  = new ImageIcon("Ranking.png").getImage();
+        rankingImg  = new ImageIcon("Graphics/Ranking.png").getImage();
     }
 
     // =======================================================================

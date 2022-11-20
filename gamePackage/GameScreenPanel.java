@@ -95,8 +95,8 @@ public class GameScreenPanel extends JPanel implements MouseListener, MouseMotio
         addMouseListener(this);
         addMouseMotionListener(this);
         Dimension dim = getPreferredSize();
-        dim.width = intScreenSizeArray[0] / 4 * 3;
-        dim.height = intScreenSizeArray[1] / 4 * 3 - 60;
+        dim.width = intScreenSizeArray[0];
+        dim.height = intScreenSizeArray[1];
         setPreferredSize(dim);
         setLayout(new BorderLayout());
         add(RightSideGameScreenPanel, BorderLayout.EAST);
@@ -115,12 +115,12 @@ public class GameScreenPanel extends JPanel implements MouseListener, MouseMotio
         for(int x = 0; x < 5; x++) {
             for(int y = 0; y < 5; y++) {
                 solved = !buttonOnOffStateArray[x + 1][y + 1];
-                if(solved == false) {
-                    return solved;
+                if(!solved) {
+                    return false;
                 }
             }
         }
-        return solved;
+        return true;
     }
 
     // =======================================================================
@@ -263,8 +263,9 @@ public class GameScreenPanel extends JPanel implements MouseListener, MouseMotio
     // Returns void
     // =======================================================================
     public void paintComponent(Graphics g) {
+        int[] intScreenSizeArray = universalValues.screenSize();
         g.drawImage(backgroundImg, 0, 0, this);
-        g.drawImage(titleImg, 815, 0, this);
+        g.drawImage(titleImg, intScreenSizeArray[0] / 4 + 125, intScreenSizeArray[1] / 20, this);
 
         for(int x = 0; x < 5; x++) {
             for(int y = 0; y < 5; y++) {
@@ -281,16 +282,16 @@ public class GameScreenPanel extends JPanel implements MouseListener, MouseMotio
     // Returns void
     // =======================================================================
     public void importImage() {
-        backgroundImg  = new ImageIcon("background.png").getImage();
-        titleImg = new ImageIcon("TItle.png").getImage();
-        buttonImgBasicArray[0]= new ImageIcon("GameButtonOn.png").getImage();
-        buttonImgBasicArray[1]= new ImageIcon("GameButtonOnPressed.png").getImage();
-        buttonImgBasicArray[2]= new ImageIcon("GameButtonOnWithSolutionRing.png").getImage();
-        buttonImgBasicArray[3]= new ImageIcon("GameButtonOnPressedWithSolutionRing.png").getImage();
-        buttonImgBasicArray[4]= new ImageIcon("GameButtonOff.png").getImage();
-        buttonImgBasicArray[5]= new ImageIcon("GameButtonOffPressed.png").getImage();
-        buttonImgBasicArray[6]= new ImageIcon("GameButtonOffWithSolutionRing.png").getImage();
-        buttonImgBasicArray[7]= new ImageIcon("GameButtonOffPressedWithSolutionRing.png").getImage();
+        backgroundImg  = new ImageIcon("Graphics/background.png").getImage();
+        titleImg = new ImageIcon("Graphics/Title.png").getImage();
+        buttonImgBasicArray[0]= new ImageIcon("Graphics/GameButtonOn.png").getImage();
+        buttonImgBasicArray[1]= new ImageIcon("Graphics/GameButtonOnPressed.png").getImage();
+        buttonImgBasicArray[2]= new ImageIcon("Graphics/GameButtonOnWithSolutionRing.png").getImage();
+        buttonImgBasicArray[3]= new ImageIcon("Graphics/GameButtonOnPressedWithSolutionRing.png").getImage();
+        buttonImgBasicArray[4]= new ImageIcon("Graphics/GameButtonOff.png").getImage();
+        buttonImgBasicArray[5]= new ImageIcon("Graphics/GameButtonOffPressed.png").getImage();
+        buttonImgBasicArray[6]= new ImageIcon("Graphics/GameButtonOffWithSolutionRing.png").getImage();
+        buttonImgBasicArray[7]= new ImageIcon("Graphics/GameButtonOffPressedWithSolutionRing.png").getImage();
     }
 
     // =======================================================================
@@ -305,8 +306,8 @@ public class GameScreenPanel extends JPanel implements MouseListener, MouseMotio
         tempListenedToComponentXY[1] = 0;
         for(int x = 0; x < 5; x++) {
             for(int y = 0; y < 5; y++) {
-                int buttonX = (intScreenSizeArray[0] / 4 * 3 / 2 - 575) + x * 250;
-                int buttonY = 330 + y * 250;
+                int buttonX = intScreenSizeArray[0] / 4 + 145 + x * 250;
+                int buttonY = 350 + y * 250;
                 int tempPolygonXArray[] = new int[8];
                 int tempPolygonYArray[] = new int[8];
                 buttonLocationArray[0][x][y] = buttonX;

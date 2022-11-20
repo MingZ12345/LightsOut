@@ -34,9 +34,10 @@ public class EnterNamePanel extends JPanel implements MouseListener, MouseMotion
         spacingPanel = new SpacingPanel();
         int[] intScreenSizeArray = universalValues.screenSize();
         Dimension dim = getPreferredSize();
-        dim.width = intScreenSizeArray[0] / 4 * 3;
-        dim.height = intScreenSizeArray[1] / 4 * 3 - 60;
-        nameTextField = new JTextField(30);
+        dim.width = intScreenSizeArray[0];
+        dim.height = intScreenSizeArray[1];
+        nameTextField = new JTextField(20);
+        nameTextField.setHorizontalAlignment(JTextField.CENTER);
         nameTextField.setFont(new Font("Lucida", Font.PLAIN, 100));
         add(spacingPanel);
         add(nameTextField);
@@ -46,7 +47,7 @@ public class EnterNamePanel extends JPanel implements MouseListener, MouseMotion
     }
 
     public void importImage() {
-        enterNameImage = new ImageIcon("EnterName.png").getImage();
+        enterNameImage = new ImageIcon("Graphics/EnterName.png").getImage();
     }
 
     public void setButtonPolygon() {
