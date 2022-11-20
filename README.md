@@ -1,5 +1,6 @@
 # LightsOut
-This is an implementation of the classic lights out game. Below is what the game looks like.  
+This is an implementation of the classic lights out game.  
+Below is what the game looks like.  
 ### Start Screen
 ![alt text](Graphics/MainPage.png)
 ### Ending Screen
