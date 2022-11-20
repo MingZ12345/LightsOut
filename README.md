@@ -3,5 +3,5 @@ This is an implementation of the classic lights out game. Below is what the game
 ### Start Screen
 ![alt text](Graphics/MainPage.png)
 ### Ending Screen
-![alt text](Graphics/EndOfGameDisplay.png)
+![alt text](Graphics/EndGameScreen.png)
 
